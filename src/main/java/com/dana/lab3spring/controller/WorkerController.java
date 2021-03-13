@@ -1,7 +1,7 @@
 package com.dana.lab3spring.controller;
 
 import com.dana.lab3spring.controller.exception.*;
-import com.dana.lab3spring.model.DTO.HRHireFireWorkerDTO;
+import com.dana.lab3spring.model.dto.HRHireFireWorkerDTO;
 import com.dana.lab3spring.model.Worker;
 import com.dana.lab3spring.service.manager.WorkerManager;
 import com.dana.lab3spring.service.manager.WorkerValidator;

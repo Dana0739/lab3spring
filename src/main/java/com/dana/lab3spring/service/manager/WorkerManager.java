@@ -1,6 +1,6 @@
 package com.dana.lab3spring.service.manager;
 
-import com.dana.lab3spring.model.DTO.HRHireFireWorkerDTO;
+import com.dana.lab3spring.model.dto.HRHireFireWorkerDTO;
 import com.dana.lab3spring.model.OrganizationType;
 import com.dana.lab3spring.model.Position;
 import com.dana.lab3spring.model.Status;

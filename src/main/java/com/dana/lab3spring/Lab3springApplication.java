@@ -1,15 +1,10 @@
 package com.dana.lab3spring;
 
-import com.netflix.discovery.EurekaClient;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,19 +28,9 @@ public class Lab3springApplication {
         application.run(args);
     }
 
-
-    @Qualifier("eurekaClient")
-    @Autowired
-    @Lazy
-    private EurekaClient eurekaClient;
-
-    @Value("${spring.application.name}")
-    private String appName;
-
     @GetMapping("/greeting")
     public String greeting() {
-        return String.format(
-                "Hello from '%s'!", eurekaClient.getApplication(appName).getName());
+        return "Hello from the other siiideeee";
     }
 
     @Bean

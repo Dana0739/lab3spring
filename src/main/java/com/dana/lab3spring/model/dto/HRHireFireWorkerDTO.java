@@ -1,4 +1,4 @@
-package com.dana.lab3spring.model.DTO;
+package com.dana.lab3spring.model.dto;
 
 import com.dana.lab3spring.model.Position;
 import com.dana.lab3spring.model.Status;
