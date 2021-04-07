@@ -3,7 +3,6 @@ package com.dana.lab3spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +17,6 @@ import java.util.Arrays;
 import java.util.Collections;
 
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
-@EnableEurekaClient
 @EnableJpaAuditing
 @RestController
 public class Lab3springApplication {
@@ -60,9 +58,3 @@ public class Lab3springApplication {
         return source;
     }
 }
-
-// to run this application make jar (mvn package) and use command:
-// java -Dserver.port=<%port-number%> -jar <%path-to-your-jar%>.jar com.dana.soa2back.Soa2backApplication
-// for example
-// java -Dserver.port=34345 -jar lab3spring-0.0.1-SNAPSHOT.jar com.dana.soa2back.Soa2backApplication
-// java -Dserver.port=34346 -jar lab3spring-0.0.1-SNAPSHOT.jar com.dana.soa2back.Soa2backApplication
